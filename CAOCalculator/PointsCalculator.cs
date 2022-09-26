@@ -2,7 +2,7 @@
 {
     public class PointsCalculator
     {
-        static int ConvertResultsToPoints (int[] results, string[] levels, int[] points)
+        public static int ConvertResultsToPoints (int[] results, string[] levels, int[] points)
         {
             int[] gradeBoundaries = new int[8] { 90, 80, 70, 60, 50, 40, 30, 0 };
             int[] higherPoints = new int[8] { 100, 88, 77, 66, 56, 46, 37, 0 };

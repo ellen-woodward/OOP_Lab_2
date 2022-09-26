@@ -2,39 +2,39 @@
 {
     public class CAODisplay
     {
-        static void DisplayResults(string studentName, string studentNumber, string[] subjects,
+        public static void DisplayResults(string studentName, string studentNumber, string[] subjects, 
     string[] levels, int[] results, int[] points, int total)
-        {
-            Console.WriteLine($"\nStudent Name: {studentName}");
-            Console.WriteLine($"Student No.: {studentNumber}");
+{
+    Console.WriteLine($"\nStudent Name: {studentName}");
+    Console.WriteLine($"Student No.: {studentNumber}");
 
-            for (int i = 0; i < results.Length; i++)
-            {
-                Console.WriteLine($"{subjects[i],10} {levels[i],10} {results[i],10} {points[i],10}");
-            }
+    for (int i = 0; i < results.Length; i++)
+    {
+        Console.WriteLine($"{subjects[i],10} {levels[i],10} {results[i],10} {points[i],10}");
+    }
 
-            Console.WriteLine($"Total Points: {total}");
-        }
+    Console.WriteLine($"Total Points: {total}");
+}
 
-        static void WriteDetailsToFile(string studentName, string studentNumber, string[] subjects,
-            string[] levels, int[] results, int[] points, int total)
-        {
-            StreamWriter sw = new StreamWriter("Results.txt");
+        public static void WriteDetailsToFile(string studentName, string studentNumber, string[] subjects,
+    string[] levels, int[] results, int[] points, int total)
+{
+    StreamWriter sw = new StreamWriter("Results.txt");
 
-            sw.WriteLine($"Student Name: {studentName}");
-            sw.WriteLine($"Student No.: {studentNumber}");
+    sw.WriteLine($"Student Name: {studentName}");
+    sw.WriteLine($"Student No.: {studentNumber}");
 
-            for (int i = 0; i < results.Length; i++)
-            {
-                sw.WriteLine($"{subjects[i],10} {levels[i],10} {results[i],10} {points[i],10}");
-            }
+    for (int i = 0; i < results.Length; i++)
+    {
+        sw.WriteLine($"{subjects[i],10} {levels[i],10} {results[i],10} {points[i],10}");
+    }
 
-            sw.WriteLine($"Total Points: {total}");
+    sw.WriteLine($"Total Points: {total}");
 
-            sw.Flush();
-            sw.Close();
+    sw.Flush();
+    sw.Close();
 
-            Console.WriteLine("Successfully written to file");
-        }
+    Console.WriteLine("Successfully written to file");
+}
     }
 }
